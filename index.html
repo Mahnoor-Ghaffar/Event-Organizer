@@ -44,8 +44,10 @@
 
     <section class="home" id="home"> 
      <div class="content">
-        <h3>
-            its time to celebrate the best <span>event organizer</span>
+
+        <!-- Mouseover and out event use -->
+        <h3 id="heading-clr-change" onmouseover="changeColor()" onmouseout="resetColor()">
+            its time to celebrate the best <span id="head-span-chng">event organizer</span>
             </h3>
             <a href="#" class="btn">contact us</a>
         
@@ -74,7 +76,7 @@
 
     <section class="service" id="services">
        
-        <h1 class="heading"> our <span>services</span></h1>
+        <h1 class="heading">Our<span>services</span></h1>
         
         <div class="box-container">
             
@@ -135,7 +137,7 @@
         <div class="row">
 
             <div class="image">
-                <img src="assets/images/about-us.jpg" alt="">
+                <img src="assets/images/about-us.jpg" alt="our-team" onmouseover="swapPic('hover')" onmouseout="swapPic('original')" id="swapPic">
             </div>
 
             <div class="content">
@@ -146,7 +148,7 @@
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus et consequatur dolores facilis.
                   Dolores deleniti itaque aperiam, cupiditate consequuntur sunt?</p>
 
-                  <a href="#" class="btn"> contact</a>
+                  <a href="#contact" class="btn"> contact</a>
             </div>
 
         </div>
@@ -157,7 +159,7 @@
 
 
 
-    <!---------------gallery section start --------------->\
+    <!---------------gallery section start --------------->
 
     <section class="gallery" id="gallery">
 
@@ -445,16 +447,18 @@
 
         <form action="">
 
+            <!-- on focus and blur evet used -->
             <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
+                <input type="text" placeholder="name" id="name" onFocus="onFocus(this)" onblur="onBlur(this)">
+                <input type="email" placeholder="email" id="email" onFocus="onFocus(this)" onblur="onBlur(this)">
             </div>
             <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="subject">
+                <input type="number" placeholder="number" id="number" onFocus="onFocus(this)" onblur="onBlur(this)">
+                <input type="text" placeholder="subject" id="subject" onFocus="onFocus(this)" onblur="onBlur(this)">
             </div>
-            <textarea name="" id="" placeholder="your message" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" class="btn">
+            <textarea name="" id="message" placeholder="    
+     your message....." id="" cols="30" rows="10" onFocus="onFocus(this)" onblur="onBlur(this)"></textarea>
+            <input type="submit" onclick="submitForm()" value="send message" class="btn">
         </form>
 
     </section>
@@ -519,7 +523,6 @@
 
     </section>
     <!----------------footer section end ----------------->
-
 
 
 
